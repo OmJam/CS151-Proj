@@ -7,9 +7,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CompiledTemController">
    <children>
-      <TextArea fx:id="letterTA" editable="false" layoutX="18.0" layoutY="46.0" prefHeight="479.0" prefWidth="553.0" />
+      <TextArea fx:id="letterTA" layoutX="18.0" layoutY="46.0" prefHeight="479.0" prefWidth="553.0" />
       <Label layoutX="24.0" layoutY="14.0" text="Letter" />
       <Button fx:id="CompEditBtn" layoutX="236.0" layoutY="545.0" mnemonicParsing="false" onAction="#handleEdit" text="Edit" />
       <Button fx:id="cHomeBtn" layoutX="320.0" layoutY="545.0" mnemonicParsing="false" onAction="#handleCHome" text="Home" />
+      <Button fx:id="saveNewEdit" layoutX="416.0" layoutY="545.0" mnemonicParsing="false" onAction="#handleSaveNewEdit" style="-fx-background-color: #00A36C;" text="Save This Text" textFill="WHITE" />
+      <Button layoutX="531.0" layoutY="9.0" mnemonicParsing="false" onAction="#handleCTExit" style="-fx-background-color: #C70000#C70000;" text="Exit" textFill="WHITE" />
    </children>
 </AnchorPane>

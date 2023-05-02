@@ -22,6 +22,9 @@ public class CompiledTemController {
 	
 	@FXML
 	private Button cHomeBtn;
+	
+	@FXML
+	private Button saveNewEdit;
 
 	@FXML
 	void initialize() {
@@ -72,5 +75,14 @@ public class CompiledTemController {
 	public static void setRecommendation(Recommendation rec) {
 		currentRecommendation = rec;
 	}
+	
+	@FXML
+	public void handleCTExit(ActionEvent event) {
+		System.exit(0); // exit application
+	}
 
+	
+	public void handleSaveNewEdit(ActionEvent event) {
+		
+	}
 }
