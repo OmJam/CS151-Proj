@@ -545,11 +545,13 @@ public class RecommendationFormController {
 
 
 		// Read Profile from file
+		try {
 		Profile p = ProfileObjectFile.read();
-//		if(p.equals(null)) {
+//		if(p == null) {
 //			AlertUtil.showError("Please fill out profile");
 //		}
-
+		
+		
 		String full = p.getFullName();
 		String t = p.getTitle();
 		String StaffSchool = p.getSchool();
@@ -557,6 +559,8 @@ public class RecommendationFormController {
 		String email = p.getEmail();
 		String phone = p.getPhone();
 		System.out.println(full);
+		
+		
 
 		if (full != null) {
 			template = template.replace("<Professor's Full Name>", full);
@@ -572,6 +576,10 @@ public class RecommendationFormController {
 		}
 		if (phone != null) {
 			template = template.replace("<Professor's phone number>", phone);
+		}
+		}
+		catch(Exception e) {
+			AlertUtil.showError("Please fill out profile");
 		}
 
 		// Save LETTER

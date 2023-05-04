@@ -1,8 +1,5 @@
 package application;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import application.file.LetterFile;
 import application.model.Recommendation;
 import javafx.event.ActionEvent;

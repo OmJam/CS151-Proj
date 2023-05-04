@@ -22,7 +22,7 @@ public class ChangePasswordSceneController {
 	private Button backBtn;
 
 	@FXML
-	private TextField oldPass, newPass;
+	private TextField oldPass, newPass, confirmPass;
 	
 	// Event Listener on Button.onAction
 	@FXML
@@ -30,10 +30,18 @@ public class ChangePasswordSceneController {
 		
 		String pass1 = oldPass.getText();
 		String pass2 = newPass.getText();
+		String pass3 = confirmPass.getText();
 		
-		if(pass1.equals("") || pass2.equals("")) {
+		if(pass1.equals("") || pass2.equals("") || pass3.equals("")) {
 			Alert alert = new Alert(AlertType.ERROR);
 			alert.setContentText("Please fill all the fields!");
+			alert.showAndWait();
+			return;
+		}
+		
+		if(!pass2.equals(pass3)) {
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setContentText("New and confirm passwords are not same!");
 			alert.showAndWait();
 			return;
 		}
