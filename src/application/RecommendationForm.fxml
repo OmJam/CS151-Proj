@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="1000.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RecommendationFormController">
+   <children>
+      <HBox prefHeight="343.0" prefWidth="610.0">
+         <children>
+            <VBox alignment="TOP_RIGHT" prefHeight="343.0" prefWidth="186.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="135.0" text="First Name:">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="122.0" text="Last Name: ">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="90.0" text="Gender:">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="103.0" text="School: ">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="130.0" text="Todays Date:">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="38.0" prefWidth="264.0" text="Program Student is Applying to: ">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="125.0" text="Semester:">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="87.0" text="Year: ">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets right="15.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="384.0" prefWidth="349.0">
+               <children>
+                  <TextField fx:id="firstNameTF" prefHeight="42.0" prefWidth="117.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="lastNameTF" prefHeight="42.0" prefWidth="100.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <ComboBox fx:id="genderSelection" prefHeight="42.0" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <TextField fx:id="schoolTF" prefHeight="42.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <DatePicker fx:id="dateDP" prefHeight="42.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </DatePicker>
+                  <ComboBox fx:id="programCB" prefHeight="42.0" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="semesterCB" prefHeight="42.0" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <TextField fx:id="yearTF" prefHeight="42.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label text="Grades for each Course(List in order):   " />
+      <HBox prefHeight="125.0" prefWidth="610.0">
+         <children>
+            <VBox fx:id="courseDynamicVBox" prefHeight="125.0" prefWidth="628.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleAddCourse" text="Add Course" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label text="Personal Characteristics: " />
+      <ListView fx:id="listViewPC" prefHeight="88.0" prefWidth="650.0" />
+      <Label text="Academic Characteristics: " />
+      <ListView fx:id="listViewAC" prefHeight="83.0" prefWidth="650.0" />
+      <Label prefHeight="26.0" prefWidth="320.0" text="note: hold CTRL to select multiple" />
+      <AnchorPane prefHeight="148.0" prefWidth="626.0">
+         <children>
+            <Button fx:id="compileBtn" layoutX="509.0" layoutY="173.0" mnemonicParsing="false" onAction="#handleCompile" style="-fx-background-color: #00A36C;" text="Compile and Save" textFill="WHITE" />
+            <Button fx:id="recLogOut" alignment="BOTTOM_RIGHT" layoutY="177.0" mnemonicParsing="false" onAction="#handleRecLogOut" style="-fx-background-color: #C70000#C70000;" text="Log Out" textFill="WHITE" />
+            <Button fx:id="homePageBtn" layoutX="272.0" layoutY="176.0" mnemonicParsing="false" onAction="#handleHomePage" text="Home Page" />
+            <Label layoutX="-1.0" layoutY="27.0" text=" Did this student have a term project?">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="termCheckBox" layoutX="243.0" layoutY="28.0" mnemonicParsing="false" text="Yes" />
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

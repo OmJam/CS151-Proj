@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="423.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeSceneController">
+   <children>
+      <Pane prefHeight="60.0" prefWidth="423.0" style="-fx-background-color: #137b7d;">
+         <children>
+            <Label layoutX="174.0" layoutY="20.0" prefHeight="9.0" prefWidth="75.0" text="LoginApp" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="ResetPass" layoutX="268.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleReset" text="Reset Password" />
+            <Button fx:id="profileBtn" layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onAction="#handleProfileSettings" text="Configure Profile Settings" />
+         </children>
+      </Pane>
+      <Label layoutX="166.0" layoutY="95.0" prefHeight="20.0" prefWidth="90.0" text="Home Screen">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="166.0" layoutY="200.0" prefHeight="20.0" prefWidth="90.0" text="Welcome Back !">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="logoutBtn" layoutX="19.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="27.0" prefWidth="90.0" style="-fx-background-color: #137b7d;" text="Logout" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="Rec" layoutX="198.0" layoutY="354.0" mnemonicParsing="false" onAction="#handleRec" style="-fx-background-color: #137b7d;" text="Create Recommendation" textFill="WHITE" />
+      <Button fx:id="searchBtn" layoutX="275.0" layoutY="145.0" mnemonicParsing="false" onAction="#handleSearch" text="Search" />
+      <TextField fx:id="searchTF" layoutX="118.0" layoutY="145.0" promptText="Search by Last Name" />
+   </children>
+</AnchorPane>
